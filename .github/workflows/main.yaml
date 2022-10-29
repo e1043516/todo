@@ -3,7 +3,7 @@ name: todo
 on: 
   push:
     branches:
-    - 'release/*'
+    - release/[A-Za-z0-9.]+
 
 # Jobs in todo
 jobs: 
