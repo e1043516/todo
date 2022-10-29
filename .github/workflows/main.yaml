@@ -1,0 +1,22 @@
+name: todo
+# trigger
+on: 
+  push:
+    branches:
+    - 'release/*'
+
+# Jobs in todo
+jobs: 
+  #job name,
+  todo:
+    #OS that this workflow will be runnning on
+    runs-on: ubuntu-latest
+
+    # list of steps to perform task
+    steps:
+    - name: echo the branch name
+      run: echo "current branch - ${{ github.ref_name }} "
+    - name: Checkout the current repos
+      uses: actions/checkout@v3
+      with:
+        ref: " ${{ github.ref_name }} "
